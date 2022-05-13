@@ -1,0 +1,1077 @@
+options:
+	Helper: helper
+	Modo: moderateur
+	SuperModo: super-moderateur
+	prefix: &3&lserveur&f&l.FR &7»
+
+
+command /ss [<offlineplayer>]:
+	trigger:
+		if player doesn't have permission "{@Helper}" or "{@Modo}" or "{@Modo}":
+			send "{@prefix} &cVous n'avez pas la permission !"
+			stop
+		if arg 1 is not set:
+			send "{@prefix} &c⚠ Merci de choisir un joueur !"
+		else:
+			open chest with 6 rows named "&eSanctions&8 // &6Général" to player
+			play sound "ORB_PICKUP" to player with volume 5 and pitch 5
+			wait 2 ticks
+			if player is op:
+				format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to run [make player execute command "/ssautres %arg 1%"]
+				format slot 9 of player with blue stained glass pane named " " to be unstealable
+				format slot 10 of player with blue stained glass pane named " " to be unstealable
+				format slot 11 of player with blue stained glass pane named " " to be unstealable
+				format slot 12 of player with blue stained glass pane named " " to be unstealable
+				format slot 13 of player with blue stained glass pane named " " to be unstealable
+				format slot 14 of player with blue stained glass pane named " " to be unstealable
+				format slot 15 of player with blue stained glass pane named " " to be unstealable
+				format slot 16 of player with blue stained glass pane named " " to be unstealable
+				format slot 17 of player with blue stained glass pane named " " to be unstealable
+				format slot 31 of player with paper named "&3Texte" with lore "&fSi vous souhaitez attribuer un||&fmute à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssmute %arg 1%"]
+				format slot 40 of player with lava bucket named "&3Abus" with lore "&fSi vous souhaitez attribuer un||&fabus à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssabus %arg 1%"]
+				format slot 8 of player with red wool named "&cFermer" to close
+				format slot 0 of player with book named "&fⒸ Copyright ReineMC" with lore "&7Développer par TR7FFF" to be unstealable
+				format slot 39 of player with golden apple named "&3Triche" with lore "&fSi &3%arg 1% &ftriche veuillez||&fle bannir dans cette catégorie !|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssban %arg 1%"]
+				format slot 41 of player with iron sword named "&3Gameplay" with lore "&fSanction liée au &6comportement in-game||&fde &3%arg 1%.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssgameplay %arg 1%"]
+				stop
+			if player has permission "{@Modo}":
+				format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to run [make player execute command "/ssautres %arg 1%"]
+				format slot 9 of player with blue stained glass pane named " " to be unstealable
+				format slot 10 of player with blue stained glass pane named " " to be unstealable
+				format slot 11 of player with blue stained glass pane named " " to be unstealable
+				format slot 12 of player with blue stained glass pane named " " to be unstealable
+				format slot 13 of player with blue stained glass pane named " " to be unstealable
+				format slot 14 of player with blue stained glass pane named " " to be unstealable
+				format slot 15 of player with blue stained glass pane named " " to be unstealable			
+				format slot 16 of player with blue stained glass pane named " " to be unstealable			
+				format slot 17 of player with blue stained glass pane named " " to be unstealable
+				format slot 31 of player with paper named "&3Texte" with lore "&fSi vous souhaitez attribuer un||&fmute à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssmute %arg 1%"]
+				format slot 40 of player with lava bucket named "&3Abus" with lore "&fSi vous souhaitez attribuer un||&fabus à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssabus %arg 1%"]
+				format slot 8 of player with red wool named "&cFermer" to close
+				format slot 0 of player with book named "&fⒸ Copyright ReineMC" with lore "&7Développer par TR7FFF" to be unstealable
+				format slot 39 of player with golden apple named "&3Triche" with lore "&fSi &3%arg 1% &ftriche veuillez||&fle bannir dans cette catégorie !|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssban %arg 1%"]
+				format slot 41 of player with iron sword named "&3Gameplay" with lore "&fSanction liée au &6comportement in-game||&fde &3%arg 1%.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssgameplay %arg 1%"]
+				stop
+			if player has permission "{@Modo}":
+				format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+				format slot 9 of player with blue stained glass pane named " " to be unstealable
+				format slot 10 of player with blue stained glass pane named " " to be unstealable
+				format slot 11 of player with blue stained glass pane named " " to be unstealable
+				format slot 12 of player with blue stained glass pane named " " to be unstealable
+				format slot 13 of player with blue stained glass pane named " " to be unstealable
+				format slot 14 of player with blue stained glass pane named " " to be unstealable
+				format slot 15 of player with blue stained glass pane named " " to be unstealable
+				format slot 16 of player with blue stained glass pane named " " to be unstealable
+				format slot 17 of player with blue stained glass pane named " " to be unstealable
+				format slot 31 of player with paper named "&3Texte" with lore "&fSi vous souhaitez attribuer un||&fmute à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssmute %arg 1%"]
+				format slot 40 of player with lava bucket named "&3Abus" with lore "&fSi vous souhaitez attribuer un||&fabus à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssabus %arg 1%"]
+				format slot 8 of player with red wool named "&cFermer" to close
+				format slot 0 of player with book named "&fⒸ Copyright ReineMC" with lore "&7Développer par TR7FFF" to be unstealable
+				format slot 39 of player with golden apple named "&3Triche" with lore "&fSi &3%arg 1% &ftriche veuillez||&fle bannir dans cette catégorie !|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssban %arg 1%"]
+				format slot 41 of player with iron sword named "&3Gameplay" with lore "&fSanction liée au &6comportement in-game||&fde &3%arg 1%.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssgameplay %arg 1%"]
+				stop
+			if player has permission "{@Helper}":
+				format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+				format slot 9 of player with blue stained glass pane named " " to be unstealable
+				format slot 10 of player with blue stained glass pane named " " to be unstealable
+				format slot 11 of player with blue stained glass pane named " " to be unstealable
+				format slot 12 of player with blue stained glass pane named " " to be unstealable
+				format slot 13 of player with blue stained glass pane named " " to be unstealable
+				format slot 14 of player with blue stained glass pane named " " to be unstealable
+				format slot 15 of player with blue stained glass pane named " " to be unstealable
+				format slot 16 of player with blue stained glass pane named " " to be unstealable
+				format slot 17 of player with blue stained glass pane named " " to be unstealable
+				format slot 31 of player with paper named "&3Texte" with lore "&fSi vous souhaitez attribuer un||&fmute à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssmute %arg 1%"]
+				format slot 40 of player with lava bucket named "&3Abus" with lore "&fSi vous souhaitez attribuer un||&fabus à &3%arg 1%&7.|| ||&a> &fClique gauche pour ouvrir !" to run [make player execute command "/ssabus %arg 1%"]
+				format slot 8 of player with redstone named "&cFermer" to close
+				format slot 0 of player with book named "&fⒸ Copyright ReineMC" with lore "&7Développer par TR7FFF" to be unstealable
+				stop
+			else:
+				send "{@prefix} &cVous n'avez pas la permission !"
+
+command /ssban [<offlineplayer>]:
+	trigger:
+		if player has permission "{@Modo}" or "{@Modo}":
+			open chest with 6 rows named "&eSanctions&8 // &6Ban" to player
+			play sound "ORB_PICKUP" to player with volume 5 and pitch 5
+			wait 2 ticks
+			if player have permission "{@Modo}":
+				format slot 0 of player with red hardened clay named "&cUnban %arg 1%" to close then run [make player execute command "/ssunban %arg 1%"]
+				format slot 1 of player with orange hardened clay named "&6Unmute %arg 1%" to close then run [make player execute command "/ssunmute %arg 1%"]
+			format slot 5 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+			format slot 3 of player with golden apple named "&6Ban" to be unstealable
+			format slot 9 of player with blue stained glass pane named " " to be unstealable
+			format slot 10 of player with blue stained glass pane named " " to be unstealable
+			format slot 11 of player with blue stained glass pane named " " to be unstealable
+			format slot 12 of player with blue stained glass pane named " " to be unstealable
+			format slot 13 of player with blue stained glass pane named " " to be unstealable
+			format slot 14 of player with blue stained glass pane named " " to be unstealable
+			format slot 15 of player with blue stained glass pane named " " to be unstealable
+			format slot 16 of player with blue stained glass pane named " " to be unstealable
+			format slot 17 of player with blue stained glass pane named " " to be unstealable
+			format slot 8 of player with red wool named "&cRetour" to run [make player execute command "/ss %arg 1%"]
+			format slot 29 of player with cobweb named "&6Anti-Knockback" with lore "&fUtilisation d'un anti-knockback:||&fLe joueur ne prend pas de recul||&florsqu'il est heurté par un joueur||&fou un projectile.|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm %arg 1%"]
+			format slot 30 of player with iron sword named "&6Forcefield / KillAura" with lore "&fLe joueur frappe automatiquement:||&a> &fForcefield||&a> &fKillAura||&a> &fTrigger bot||&a>...|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm1 %arg 1%"]
+			format slot 31 of player with clock named "&6Timer / FastPlace" with lore "&fLe joueur a augmennté la vitesse du||&fjeu pour efectuer certaines||&factions plus vite.||&fOu il place juste des blocs plus||&fvite.|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm2 %arg 1%"]
+			format slot 32 of player with bow named "&6Reach" with lore "&fLe joueur frappe de plus loin.|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm3 %arg 1%"]
+			format slot 33 of player with stone named "&6Autres" with lore "&fAutres mode de triche.||&fEx:||&a> &fCheat toupie|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm4 %arg 1%"]
+			format slot 39 of player with iron axe named "&6Macro / Jitterclick / ..." with lore "&fCPS élevés avec un réel avantage en jeu !|| ||&fClique gauche: 17 cps (MAX).|| ||&fClique droit: être sûr qu'une macro||&fest utilisée|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:1d" to run [make player execute command "/ssbanconfirm5 %arg 1%"]
+			format slot 40 of player with diamond axe named "&6Macro / Jitterclick / ... &8(perm)" with lore "&fCPS très élevés et être sûr qu'un||&fmod de triche ou un macro est||&futilisé !|| ||&fClique gauche: +20 cps constant||&f&fClique droit: être sûr qu'une macro||&fest utilisée|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm6 %arg 1%"]
+			format slot 41 of player with feather named "&6Fly / Glide" with lore "&fUtilisation d'un mode pour voler ou||&fplaner.|| ||&a> &fClique gauche pour appliquer||&7Preuves obligatoire (pas obligé de rec)||&7 /ban:15d" to run [make player execute command "/ssbanconfirm7 %arg 1%"]
+
+command /finalban [<offline player>] [<text>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		if arg 1 is set:
+			if arg 2 is "Macro / Jitterclick / ... (permanent)":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Macro / Jitterclick / ... (perm)"
+			if arg 2 is "Macro / Jitterclick / ...":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Macro / Jitterclick / ..."
+			if arg 2 is "Anti-Knockback":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Anti-Knockback"
+			if arg 2 is "Forcefield / KillAura":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Forcefield / KillAura"
+			if arg 2 is "Timer / FastPlace":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Timer / FastPlace"
+			if arg 2 is "Reach":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Reach"
+			if arg 2 is "Autres":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Autres"
+			if arg 2 is "Fly":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 15 d Fly"
+
+command /ssbanconfirm [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Anti-Knockback" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Anti-Knockback"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+
+command /ssbanconfirm1 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Forcefield / KillAura" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Forcefield / KillAura"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssbanconfirm2 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Timer / FastPlace" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Timer / FastPlace"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssbanconfirm3 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Reach" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Reach"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssbanconfirm4 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Autres" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Autres"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssbanconfirm5 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Macro / Jitterclick / ..." with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Macro / Jitterclick / ..."]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssbanconfirm6 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Macro / Jitterclick / ... (permanent)" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Macro / Jitterclick / ... (permanent)"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssbanconfirm7 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Fly" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalban %arg 1% Fly"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssban %arg 1%"]
+		stop
+
+command /ssabus [<offlineplayer>]:
+	trigger:
+		if player has permission "{@Helper}" or "{@Modo}":
+			open chest with 6 rows named "&eSanctions&8 // &6Abus" to player
+			play sound "ORB_PICKUP" to player with volume 5 and pitch 5
+			wait 2 ticks
+			if player have permission "{@Modo}":
+				format slot 0 of player with red hardened clay  named "&cUnban %arg 1%" to close then run [make player execute command "/ssunban %arg 1%"]
+				format slot 1 of player with orange hardened clay named "&6Unmute %arg 1%" to close then run [make player execute command "/ssunmute %arg 1%"]
+			format slot 5 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+			format slot 3 of player with lava bucket named "&6Abus" to be unstealable
+			format slot 9 of player with blue stained glass pane named " " to be unstealable
+			format slot 10 of player with blue stained glass pane named " " to be unstealable
+			format slot 11 of player with blue stained glass pane named " " to be unstealable
+			format slot 12 of player with blue stained glass pane named " " to be unstealable
+			format slot 13 of player with blue stained glass pane named " " to be unstealable
+			format slot 14 of player with blue stained glass pane named " " to be unstealable
+			format slot 15 of player with blue stained glass pane named " " to be unstealable
+			format slot 16 of player with blue stained glass pane named " " to be unstealable
+			format slot 17 of player with blue stained glass pane named " " to be unstealable
+			format slot 8 of player with red wool named "&cRetour" to run [make player execute command "/ss %arg 1%"]
+			format slot 40 of player with stone sword named "&6Fausse accusation de triche" with lore " ||&a> &fClique gauche pour appliquer||&7 /mute:1m" to run [make player execute command "/ssabusconfirm %arg 1%"]
+			format slot 32 of player with bow named "&6Report qq chose qui n'est pas interdit" with lore "&fA abusé du report chat sans raison et||&fla situation ne portait pas à confusion.|| ||&a> &fClique gauche pour appliquer||&7 /mute:1m" to run [make player execute command "/ssabusconfirm1 %arg 1%"]
+			format slot 31 of player with diamond hoe named "&6A utilisé /report à la place du signalement chat" with lore "&fA utilisé le /report à la place du||&ftriangle de signalement chat.|| ||&a> &fClique gauche pour appliquer||&7 /mute:1m" to run [make player execute command "/ssabusconfirm2 %arg 1%"]
+			format slot 30 of player with pumpkin named "&6Troll" with lore " ||&a> &fClique gauche pour appliquer||&7 /mute:1m" to run [make player execute command "/ssabusconfirm3 %arg 1%"]
+
+command /finalabus [<offline player>] [<text>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		if arg 1 is set:
+			if arg 2 is "Fausse accusation de triche":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Fausse accusation de triche"
+			if arg 2 is "Report qq chose qui n'est pas interdit":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Report qq chose qui n'est pas interdit"
+			if arg 2 is "A utilisé /report à la place du signalement chat":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m A utilisé /report à la place du signalement chat"
+			if arg 2 is "Troll":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Troll"
+
+command /ssabusconfirm [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Fausse accusation de triche" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalabus %arg 1% Fausse accusation de triche"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssabus %arg 1%"]
+		stop
+
+command /ssabusconfirm1 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Report qq chose qui n'est pas interdit" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalabus %arg 1% Report qq chose qui n'est pas interdit"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssabus %arg 1%"]
+		stop
+
+command /ssabusconfirm2 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6A utilisé /report à la place du signalement chat" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalabus %arg 1% A utilisé /report à la place du signalement chat"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssabus %arg 1%"]
+		stop
+
+command /ssabusconfirm3 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Troll" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalabus %arg 1% Troll"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssabus %arg 1%"]
+		stop
+
+
+command /ssgameplay [<offlineplayer>]:
+	trigger:
+		if player has permission "{@Modo}" or "{@Modo}":
+			open chest with 6 rows named "&eSanctions&8 // &6Gameplay" to player
+			play sound "ORB_PICKUP" to player with volume 5 and pitch 5
+			wait 3 ticks
+			if player have permission "{@Modo}":
+				format slot 0 of player with red hardened clay  named "&cUnban %arg 1%" to close then run [make player execute command "/ssunban %arg 1%"]
+				format slot 1 of player with orange hardened clay named "&6Unmute %arg 1%" to close then run [make player execute command "/ssunmute %arg 1%"]
+			format slot 5 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+			format slot 3 of player with iron sword named "&6Gameplay" to be unstealable
+			format slot 9 of player with blue stained glass pane named " " to be unstealable
+			format slot 10 of player with blue stained glass pane named " " to be unstealable
+			format slot 11 of player with blue stained glass pane named " " to be unstealable
+			format slot 12 of player with blue stained glass pane named " " to be unstealable
+			format slot 13 of player with blue stained glass pane named " " to be unstealable
+			format slot 14 of player with blue stained glass pane named " " to be unstealable
+			format slot 15 of player with blue stained glass pane named " " to be unstealable
+			format slot 16 of player with blue stained glass pane named " " to be unstealable
+			format slot 17 of player with blue stained glass pane named " " to be unstealable
+			format slot 8 of player with red wool named "&cRetour" to run [make player execute command "/ss %arg 1%"]
+			format slot 29 of player with clownfish named "&6Alliance en jeu solo" with lore "&fAlliance entre deux joueurs ou plus||&fdans un partie solo.|| ||&a> &fClique gauche pour appliquer||&7 /ban:24h" to run [make player execute command "/ssgameplayconfirm %arg 1%"]
+			format slot 30 of player with cooked fish named "&6Alliance entre équipes" with lore "&fAlliance entre deux équipes ou plus||&fdans un partie.|| ||&a> &fClique gauche pour appliquer||&7 /ban:36h" to run [make player execute command "/ssgameplayconfirm1 %arg 1%"]
+			format slot 31 of player with dirt named "&6Construction incorrecte" with lore "&fConstruction incorrecte pouvant||&fheurter la sensibilité de la||&fmajorité.|| ||&a> &fClique gauche pour appliquer||&7 /ban:12h" to run [make player execute command "/ssgameplayconfirm2 %arg 1%"]
+			format slot 32 of player with leather tunic named "&6Skin incorrect" with lore "&fSkin incorrect:||&a> &fSexe/Nu||&a> &fNazi||&a> &f...|| ||&a> &fClique gauche pour appliquer||&7 /ban:1h" to run [make player execute command "/ssgameplayconfirm3 %arg 1%"]
+			format slot 33 of player with flint and steel named "&6Anti-Jeu" with lore "&fNe joue pas l'objectif de façon||&fvolontaire pendant la partie.|| ||&a> &fClique gauche pour appliquer||&7 /ban:1d" to run [make player execute command "/ssgameplayconfirm4 %arg 1%"]
+
+command /finalgameplay [<offline player>] [<text>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		if arg 1 is set:
+			if arg 2 is "Alliance en jeu solo":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 1 d Alliance en jeu solo"
+			if arg 2 is "Alliance entre équipes":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "&cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 36 h Alliance entre équipes"
+			if arg 2 is "Construction incorrecte":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "&cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "&{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 12 h Construction incorrecte"
+			if arg 2 is "Skin incorrect":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 1 h Skin incorrect"
+			if arg 2 is "Anti-Jeu":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas ban un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 1 d Anti-Jeu"
+
+command /ssgameplayconfirm [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Alliance en jeu solo" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalgameplay %arg 1% Alliance en jeu solo"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssgameplay %arg 1%"]
+		stop
+
+command /ssgameplayconfirm1 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Alliance entre équipes" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalgameplay %arg 1% Alliance entre équipes"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssgameplay %arg 1%"]
+		stop
+
+command /ssgameplayconfirm2 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Construction incorrecte" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalgameplay %arg 1% Alliance en jeu solo"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssgameplay %arg 1%"]
+		stop
+
+command /ssgameplayconfirm3 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Skin incorrect" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalgameplay %arg 1% Alliance en jeu solo"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssgameplay %arg 1%"]
+		stop
+
+command /ssgameplayconfirm4 [<offlineplayer>]:
+	permission: {@Modo}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Anti-Jeu" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalgameplay %arg 1% Alliance en jeu solo"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssgameplay %arg 1%"]
+		stop
+
+
+
+
+command /ssmute [<offlineplayer>]:
+	trigger:
+		if player has permission "{@Helper}" or "{@Modo}" or "{@Modo}":
+			if arg 1 is not set:
+				send "{@prefix} &c⚠ Merci de choisir un joueur !"
+			else:
+				open chest with 6 rows named "&eSanctions&8 // &6Mute" to player
+				play sound "ORB_PICKUP" to player with volume 5 and pitch 5
+				wait 2 ticks
+				if player have permission "{@Modo}":
+					format slot 0 of player with red hardened clay  named "&cUnban %arg 1%" to close then run [make player execute command "/ssunban %arg 1%"]
+					format slot 1 of player with orange hardened clay named "&6Unmute %arg 1%" to close then run [make player execute command "/ssunmute %arg 1%"]
+				format slot 3 of player with paper named "&6Texte" to be unstealable
+				format slot 5 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+				format slot 9 of player with blue stained glass pane named " " to be unstealable
+				format slot 10 of player with blue stained glass pane named " " to be unstealable
+				format slot 11 of player with blue stained glass pane named " " to be unstealable
+				format slot 12 of player with blue stained glass pane named " " to be unstealable
+				format slot 13 of player with blue stained glass pane named " " to be unstealable
+				format slot 14 of player with blue stained glass pane named " " to be unstealable
+				format slot 15 of player with blue stained glass pane named " " to be unstealable
+				format slot 16 of player with blue stained glass pane named " " to be unstealable
+				format slot 17 of player with blue stained glass pane named " " to be unstealable
+				format slot 8 of player with red wool named "&cRetour" to run [make player execute command "/ss %arg 1%"]
+				format slot 28 of player with wooden hoe named "&6Message inutile" with lore "&fMessage inutile qui encombre le||&fchat sans raison|| ||&a> &fClique gauche pour appliquer||&7 /mute:1m" to run [make player execute command "/ssmuteconfirmss %arg 1%"]
+				format slot 29 of player with glass bottle named "&6Fausse information" with lore "&fQuand un joueur poste une||&finformation totalement fausse sans||&fse renseigner ou pour troller.|| ||&a> &fClique gauche pour appliquer||&7 /mute:3m" to run [make player execute command "/ssmuteconfirm1 %arg 1%"]
+				format slot 30 of player with magma cream named "&6SMS" with lore "&fMessage complètement en SMS;||&fl'auteur fait réellement preuve de||&fmauvaise volonté pour se faire comprendre.|| ||&a> &fClique gauche pour appliquer||&7 /mute:1m" to run [make player execute command "/ssmuteconfirm2 %arg 1%"]
+				format slot 31 of player with sunflower named "&6Formatage incorrect" with lore "&fTentative de mise en avant du||&fmessage en contournant le système||&fde protection.|| ||&a> &fClique gauche pour appliquer||&7 /mute:2m" to run [make player execute command "/ssmuteconfirm3 %arg 1%"]
+				format slot 32 of player with diamond sword named "&6Vantardise" with lore "&fUn joueur se vante et rabaisse un||&fautre.|| ||&a> &fClique gauche pour appliquer||&7 /mute:15m" to run [make player execute command "/ssmuteconfirm4 %arg 1%"]
+				format slot 33 of player with tnt named "&6Flood" with lore "&fEnvoi de plusieurs messages||&fsimilaires en peu de temps.|| ||&a> &fClique gauche pour appliquer||&7 /mute:5m" to run [make player execute command "/ssmuteconfirm5 %arg 1%"]
+				format slot 34 of player with rotten flesh named "&6Mauvais langage" with lore "&fUtilise des mots grossiers ou des||&finsultes sans insulter quelqu'un.|| ||&a> &fClique gauche pour appliquer||&7 /mute:20m" to run [make player execute command "/ssmuteconfirm6 %arg 1%"]
+				format slot 37 of player with golden carrot named "&6Provocation" with lore "&fUn joueur provoque un autre||&fjoueur.|| ||&a> &fClique gauche pour appliquer||&7 /mute:15m" to run [make player execute command "/ssmuteconfirm7 %arg 1%"]
+				format slot 38 of player with creeper head named "&6Insulte" with lore "&fUn joueur insulte.|| ||&a> &fClique gauche pour appliquer||&7 /mute:30m" to run [make player execute command "/ssmuteconfirm8 %arg 1%"]
+				format slot 39 of player with ender pearl named "&6Incitation à l'infraction" with lore "&fIncite à enfreindre les règles.|| ||&a> &fClique gauche pour appliquer||&7 /mute:20m" to run [make player execute command "/ssmuteconfirm9 %arg 1%"]
+				format slot 40 of player with book named "&6Contournement protection chat" with lore "&fContourne un protection du chat de||&ffaçon délibérée.|| ||&a> &fClique gauche pour appliquer||&7 /mute:30m" to run [make player execute command "/ssmuteconfirm10 %arg 1%"]
+				format slot 41 of player with minecart named "&6Lien interdit" with lore "&fLien vers un site interdit (porno,||&fetc mais sans tentative de hack).|| ||&a> &fClique gauche pour appliquer||&7 /ban:1d" to run [make player execute command "/ssmuteconfirm11 %arg 1%"]
+				format slot 42 of player with potato named "&6Publicité" with lore "&fPublicité pour un autre serveur ou||&fservice !||&fAttention, les citation sont autorisées !|| ||&a> &fClique gauche pour appliquer||&7 /mute:5m" to run [make player execute command "/ssmuteconfirm12 %arg 1%"]
+				format slot 43 of player with carrot on a stick named "&6DDoS ou Hack/Fake/Fishing" with lore "&fTentative de hack/ddos/abus d'un||&fautres utilisateur.|| ||&a> &fClique gauche pour appliquer||&7 /ban:7d" to run [make player execute command "/ssmuteconfirm13 %arg 1%"]
+				format slot 48 of player with name tag named "&6Nom d'utilisateur incorrect" with lore "&fPseudonyme invalide (insultant)||&fOu se fait passer pour quelqu'un||&fde connu.|| ||&a> &fClique gauche pour appliquer||&7 /ban:1000d (demande de deban)" to run [make player execute command "/ssmuteconfirm14 %arg 1%"]
+				format slot 50 of player with shears named "&6Menace(s) IRL" with lore "&fDe grosses menaces IRL qui peuvent||&fréellement faire peur.|| ||&a> &fClique gauche pour appliquer||&7 /ban:40y" to run [make player execute command "/ssmuteconfirm15 %arg 1%"]
+		else:
+			send "&cVous n'avez pas la permission !"
+
+command /ssmuteconfirmss [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: &cVous n'avez pas la permission !
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Message Inutiles" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Message Inutile"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /ssmuteconfirm1 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Fausse information" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Fausse information"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /ssmuteconfirm2 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6SMS" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% SMS"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /ssmuteconfirm3 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Formatage incorrect" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Formatage incorrect"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /ssmuteconfirm4 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Vantardise" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Vantardise"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /ssmuteconfirm5 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Flood" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Flood"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /ssmuteconfirm6 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Mauvais langage" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Mauvais langage"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm7 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Provocation" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Provocation"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm8 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Insulte" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Insulte"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm9 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Incitation à l'infraction" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Incitation à l'infraction"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm10 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Contournement protection chat" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Contournement protection chat"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm11 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Lien interdit" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Lien interdit"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm12 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Publicité" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Publicité"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm13 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6DDoS/Hack/Fake/Fishing" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% DDoS/Hack/Fake/Fishing"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm14 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Nom d'utilisateur incorrect" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Nom d'utilisateur incorrect"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+command /ssmuteconfirm15 [<offlineplayer>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		open chest with 3 rows named "&eSanctions&8 // &aConfirm" to player
+		wait 2 ticks
+		format slot 4 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.14" to be unstealable
+		format slot 12 of player with emerald named "&6Menace IRL" with lore " ||&c➠ &fClique pour sanctionner %arg 1%|| " to close then run [make player execute command "/finalmute %arg 1% Menace IRL"]
+		format slot 14 of player with barrier named "&cAnnulé" to run [make player execute command "/ssmute %arg 1%"]
+		stop
+
+command /finalmute [<offline player>] [<text>]:
+	permission: {@Helper}
+	permission message: Unknow Command. Type "/help" for help.
+	trigger:
+		if arg 1 is set:
+			if arg 2 is "Lien interdit":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 1 d Lien interdit"
+			if arg 2 is "Fausse accusation de triche":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Fausse accusation de triche"
+					wait 1 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Report qq chose qui n'est pas interdit":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Report qq chose qui n'est pas interdit"
+					wait 1 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "A utilisé /report à la place du signalement chat":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m A utilisé /report à la place du signalement chat"
+					wait 1 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Troll":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Troll"
+					wait 1 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Message Inutile":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Message inutile"
+					wait 1 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Fausse information":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 3 m Fausse information"
+					wait 3 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "SMS":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 1 m Langage SMS"
+					wait 1 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Formatage incorrect":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 2 m Formatage incorrect"
+					wait 2 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Vantardise":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 15 m Vantardise"
+					wait 15 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Flood":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "&cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 5 m Flood"
+					wait 5 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Mauvais langage":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 20 m Mauvais langage"
+					wait 20 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Provocation":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 15 m Provocation"
+					wait 15 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Insulte":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 30 m Insulte"
+					wait 30 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Incitation à l'infraction":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 20 m Incitation à l'infraction"
+					wait 20 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Contournement protection chat":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 30 m Contournement protection chat"
+					wait 30 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "Publicité":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempmute %arg 1% 5 m Publicité"
+					wait 5 minute
+					set {mute.%arg 1%} to false
+					execute console command "/unmute %arg 1%"
+					stop
+			if arg 2 is "DDoS/Hack/Fake/Fishing":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 7 d DDoS/Hack/Fake/Fishing"
+					stop
+			if arg 2 is "{@prefix} Nom d'utilisateur incorrect":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix} &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 1000 d Nom d'utilisateur incorrect"
+					stop
+			if arg 2 is "Menace IRL":
+				if arg 1 have permission "{@Modo}" or "{@Modo}" or "{@Helper}" or "BUILDER" or "op":
+					send "{@prefix} &cVous ne pouvez pas mute un membre du staff !"
+					stop
+				else:
+					set {mute.%arg 1%} to true
+					send "{@prefix}] &6Application de la sanction..." to sender
+					wait 5 ticks
+					send "{@prefix} &6Sanction appliquée." to sender
+					execute console command "/tempban %arg 1% 40000 d Menace IRL"
+					stop
+
+command /ssautres [<offlineplayer>]:
+	trigger:
+		if player has permission "{@Modo}":
+			if arg 1 is not set:
+				send "&c⚠ Merci de choisir un joueur !"
+			else:
+				open chest with 6 rows named "&eSanctions&8 // &6Autres" to player
+				play sound "ORB_PICKUP" to player with volume 5 and pitch 5
+				wait 2 ticks
+				format slot 5 of player with arg 1's skull named "&e%arg 1%" with lore "&71.8/1.10" to be unstealable
+				format slot 3 of player with block of gold named "&6Autres" to be unstealable
+				format slot 9 of player with blue stained glass pane named " " to be unstealable
+				format slot 10 of player with blue stained glass pane named " " to be unstealable
+				format slot 11 of player with blue stained glass pane named " " to be unstealable
+				format slot 12 of player with blue stained glass pane named " " to be unstealable
+				format slot 13 of player with blue stained glass pane named " " to be unstealable
+				format slot 14 of player with blue stained glass pane named " " to be unstealable
+				format slot 15 of player with blue stained glass pane named " " to be unstealable
+				format slot 16 of player with blue stained glass pane named " " to be unstealable
+				format slot 17 of player with blue stained glass pane named " " to be unstealable
+				format slot 32 of player with orange hardened clay named "&6Unmute" with lore "&fSi vous souhaitez unmute &3%arg 1%|| ||&a> &fClique gauche pour appliquée !" to close then run [make player execute command "/ssunmute %arg 1%"]
+				format slot 30 of player with red hardened clay  named "&6Unban" with lore "&fSi vous souhaitez unban &3%arg 1%|| ||&a> &fClique gauche pour appliquée !" to close then run [make player execute command "/ssunban %arg 1%"]
+				format slot 8 of player with red wool named "&cRetour" to run [make player execute command "/ss %arg 1%"]
+
+
+
+command /ssunban [<offlineplayer>]:
+	permission: {@SuperModo}
+	permission message: &cVous n'avez pas la permission !
+	trigger:
+		execute console command "/unban %arg 1%"
+		send "{@prefix} &6Ban retirer !"
+
+command /ssunmute [<offlineplayer>]:
+	permission: {@SuperModo}
+	permission message: &cVous n'avez pas la permission !
+	trigger:
+		set {mute.%arg 1%} to false
+		execute console command "/unmute %arg 1%"
+		send "{@prefix} &6Mute retirer !"
